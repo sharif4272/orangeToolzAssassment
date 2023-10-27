@@ -1,4 +1,4 @@
-package assessment.juniorpost.home;
+package assessment.juniorpost.employee;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,14 +12,14 @@ import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @Controller
-public class HomeController {
+public class EmployeeController {
 
     @Autowired
     private EmployeInfoService employeInfoService;
 
     @GetMapping("/")
     public String viewHomePage(){
-        return "home";
+        return "employee";
     }
     @GetMapping("/form-upload")
     public String uploadForm(){
@@ -30,7 +30,7 @@ public class HomeController {
     @GetMapping("/list-page")
     public String listPage(Model model){
         model.addAttribute("employeeList", employeInfoService.findAll());
-        return "home";
+        return "employee";
     }
 
     @PostMapping("/file-upload-save")

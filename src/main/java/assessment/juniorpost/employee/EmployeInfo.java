@@ -1,4 +1,4 @@
-package assessment.juniorpost.home;
+package assessment.juniorpost.employee;
 
 import lombok.Data;
 import javax.persistence.Id;
