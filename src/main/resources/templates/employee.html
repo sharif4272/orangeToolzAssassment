@@ -40,18 +40,20 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!--<td></td>-->
-                            <!--<td></td>-->
-                            <!--<td></td>-->
-                            <!--<td></td>-->
-                            <!--<td></td>-->
+                            <tr th:each="csvfile, index: ${employeeList}">
+                                <td th:text="${index.count}"></td>
+                                <td th:text="${csvfile.empName}"></td>
+                                <td th:text="${csvfile.empAge}"></td>
+                                <td th:text="${csvfile.empDesignation}"></td>
+                                <td th:text="${csvfile.mobileNo}"></td>
+
+                            </tr>
                         </tbody>
                     </table>
                 </div>
                 <script>
                     $(document).ready(function() {
-                        $('#employeeInfoTable').DataTable( {
-                        });
+                        // $('#employeeInfoTable').DataTable();
                     });
                 </script>
             </div>
